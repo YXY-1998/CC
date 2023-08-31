@@ -1,0 +1,98 @@
+Warning: you requested the nanomsg event logger, but bmv2 was compiled without -DBMELOG, and the event logger cannot be activated
+Calling target program-options parser
+[19:38:23.414] [bmv2] [D] [thread 7588] Set default default entry for table 'MyIngress.ipv4_lpm': NoAction - 
+[19:38:23.414] [bmv2] [D] [thread 7588] Set default default entry for table 'MyIngress.vl_table': NoAction - 
+[19:38:23.416] [bmv2] [D] [thread 7588] Set default default entry for table 'MyEgress.int_table': NoAction - 
+[19:38:23.416] [bmv2] [D] [thread 7588] Set default default entry for table 'tbl_tcn242': tcn242 - 
+[19:38:23.416] [bmv2] [D] [thread 7588] Set default default entry for table 'tbl_mark_ecn': MyEgress.mark_ecn - 
+Adding interface s2-eth1 as port 1
+[19:38:23.418] [bmv2] [D] [thread 7588] Adding interface s2-eth1 as port 1
+Adding interface s2-eth2 as port 2
+[19:38:23.436] [bmv2] [D] [thread 7588] Adding interface s2-eth2 as port 2
+Adding interface s2-eth3 as port 3
+[19:38:23.463] [bmv2] [D] [thread 7588] Adding interface s2-eth3 as port 3
+[19:38:23.485] [bmv2] [I] [thread 7588] Starting Thrift server on port 9091
+[19:38:23.485] [bmv2] [I] [thread 7588] Thrift server was started
+[19:38:23.822] [bmv2] [T] [thread 7658] bm_get_config
+[19:38:23.824] [bmv2] [T] [thread 7658] bm_set_default_action
+[19:38:23.824] [bmv2] [D] [thread 7658] Set default entry for table 'MyEgress.int_table': MyEgress.add_int_header - 2,
+[19:38:23.824] [bmv2] [T] [thread 7658] set_egress_queue_rate
+[19:38:23.825] [bmv2] [T] [thread 7658] set_egress_queue_rate
+[19:38:23.825] [bmv2] [T] [thread 7658] set_egress_queue_rate
+[19:38:23.825] [bmv2] [T] [thread 7658] set_egress_queue_rate
+[19:38:23.825] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.825] [bmv2] [D] [thread 7658] Entry 0 added to table 'MyIngress.vl_table'
+[19:38:23.825] [bmv2] [D] [thread 7658] Dumping entry 0
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000101
+Action entry: MyIngress.Check_VL - 1,12c,
+
+[19:38:23.826] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.826] [bmv2] [D] [thread 7658] Entry 1 added to table 'MyIngress.vl_table'
+[19:38:23.826] [bmv2] [D] [thread 7658] Dumping entry 1
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000102
+Action entry: MyIngress.Check_VL - 2,12c,
+
+[19:38:23.826] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.826] [bmv2] [D] [thread 7658] Entry 2 added to table 'MyIngress.vl_table'
+[19:38:23.826] [bmv2] [D] [thread 7658] Dumping entry 2
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000103
+Action entry: MyIngress.Check_VL - 3,12c,
+
+[19:38:23.827] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.827] [bmv2] [D] [thread 7658] Entry 3 added to table 'MyIngress.vl_table'
+[19:38:23.827] [bmv2] [D] [thread 7658] Dumping entry 3
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000204
+Action entry: MyIngress.Check_VL - 3,12c,
+
+[19:38:23.827] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.827] [bmv2] [D] [thread 7658] Entry 4 added to table 'MyIngress.vl_table'
+[19:38:23.827] [bmv2] [D] [thread 7658] Dumping entry 4
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000205
+Action entry: MyIngress.Check_VL - 3,12c,
+
+[19:38:23.828] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.828] [bmv2] [D] [thread 7658] Entry 0 added to table 'MyIngress.ipv4_lpm'
+[19:38:23.828] [bmv2] [D] [thread 7658] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000205/32
+Action entry: MyIngress.ipv4_forward - a000205,2,
+
+[19:38:23.828] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.828] [bmv2] [D] [thread 7658] Entry 1 added to table 'MyIngress.ipv4_lpm'
+[19:38:23.828] [bmv2] [D] [thread 7658] Dumping entry 1
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000204/32
+Action entry: MyIngress.ipv4_forward - a000204,1,
+
+[19:38:23.829] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.829] [bmv2] [D] [thread 7658] Entry 2 added to table 'MyIngress.ipv4_lpm'
+[19:38:23.829] [bmv2] [D] [thread 7658] Dumping entry 2
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000103/32
+Action entry: MyIngress.ipv4_forward - a000103,3,
+
+[19:38:23.829] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.829] [bmv2] [D] [thread 7658] Entry 3 added to table 'MyIngress.ipv4_lpm'
+[19:38:23.829] [bmv2] [D] [thread 7658] Dumping entry 3
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000102/32
+Action entry: MyIngress.ipv4_forward - a000102,3,
+
+[19:38:23.830] [bmv2] [T] [thread 7658] bm_table_add_entry
+[19:38:23.830] [bmv2] [D] [thread 7658] Entry 4 added to table 'MyIngress.ipv4_lpm'
+[19:38:23.830] [bmv2] [D] [thread 7658] Dumping entry 4
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000101/32
+Action entry: MyIngress.ipv4_forward - a000101,3,
+
+[19:38:23.830] [bmv2] [T] [thread 7658] mirroring_sesssion_add
+[19:38:23.830] [bmv2] [T] [thread 7658] mirroring_sesssion_add
+[19:38:23.830] [bmv2] [T] [thread 7658] mirroring_sesssion_add
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory

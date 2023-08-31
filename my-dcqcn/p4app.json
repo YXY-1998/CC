@@ -1,0 +1,32 @@
+{
+  "p4_src": "dcqcn.p4",
+  "cli": true,
+  "pcap_dump": true,
+  "enable_log": true,
+  "topology": {
+    "assignment_strategy": "mixed",
+    "links": [["h1", "s1", {"bw":10}], ["h2", "s1", {"bw":10}],["h3", "s1", {"bw":10}],
+              ["s1", "s2", {"bw":10}],
+              ["h4", "s2", {"bw":10}], ["h5", "s2", {"bw":10}]],
+    "hosts": {
+      "h1": {
+      },
+      "h2": {
+      },
+      "h3":{
+      },
+      "h4":{
+      },
+      "h5":{
+      }
+    },
+    "switches": {
+      "s1": {
+        "cli_input": "s1-commands.txt"
+      },
+      "s2": {
+        "cli_input": "s2-commands.txt"
+      }
+    }
+  }
+}

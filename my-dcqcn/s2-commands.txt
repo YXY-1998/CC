@@ -1,0 +1,22 @@
+table_set_default int_table add_int_header 2
+
+set_queue_rate 1000 1
+set_queue_rate 1000 2
+set_queue_rate 1000 3
+set_queue_rate 1000 4
+
+table_add MyIngress.vl_table Check_VL 00:00:0a:00:01:01 => 1 200
+table_add MyIngress.vl_table Check_VL 00:00:0a:00:01:02 => 2 200
+table_add MyIngress.vl_table Check_VL 00:00:0a:00:01:03 => 3 200
+table_add MyIngress.vl_table Check_VL 00:00:0a:00:02:04 => 3 200
+table_add MyIngress.vl_table Check_VL 00:00:0a:00:02:05 => 3 200
+
+table_add MyIngress.ipv4_lpm ipv4_forward 10.0.2.5/32 => 00:00:0a:00:02:05 2
+table_add MyIngress.ipv4_lpm ipv4_forward 10.0.2.4/32 => 00:00:0a:00:02:04 1
+table_add MyIngress.ipv4_lpm ipv4_forward 10.0.1.3/32 => 00:00:0a:00:01:03 3
+table_add MyIngress.ipv4_lpm ipv4_forward 10.0.1.2/32 => 00:00:0a:00:01:02 3
+table_add MyIngress.ipv4_lpm ipv4_forward 10.0.1.1/32 => 00:00:0a:00:01:01 3
+
+mirroring_add 101 1
+mirroring_add 102 2
+mirroring_add 103 3

@@ -1,0 +1,143 @@
+Warning: you requested the nanomsg event logger, but bmv2 was compiled without -DBMELOG, and the event logger cannot be activated
+Calling target program-options parser
+[19:35:18.272] [bmv2] [D] [thread 6941] Set default default entry for table 'MyIngress.ipv4_lpm': NoAction - 
+[19:35:18.273] [bmv2] [D] [thread 6941] Set default default entry for table 'MyIngress.vl_table': NoAction - 
+[19:35:18.275] [bmv2] [D] [thread 6941] Set default default entry for table 'MyEgress.int_table': NoAction - 
+[19:35:18.275] [bmv2] [D] [thread 6941] Set default default entry for table 'tbl_p4qcn242': p4qcn242 - 
+[19:35:18.275] [bmv2] [D] [thread 6941] Set default default entry for table 'tbl_p4qcn244': p4qcn244 - 
+[19:35:18.275] [bmv2] [D] [thread 6941] Set default default entry for table 'tbl_p4qcn246': p4qcn246 - 
+[19:35:18.275] [bmv2] [D] [thread 6941] Set default default entry for table 'tbl_mark_ecn': MyEgress.mark_ecn - 
+[19:35:18.275] [bmv2] [D] [thread 6941] Set default default entry for table 'tbl_p4qcn258': p4qcn258 - 
+Adding interface s1-eth1 as port 1
+[19:35:18.278] [bmv2] [D] [thread 6941] Adding interface s1-eth1 as port 1
+Adding interface s1-eth2 as port 2
+[19:35:18.306] [bmv2] [D] [thread 6941] Adding interface s1-eth2 as port 2
+Adding interface s1-eth3 as port 3
+[19:35:18.316] [bmv2] [D] [thread 6941] Adding interface s1-eth3 as port 3
+Adding interface s1-eth4 as port 4
+[19:35:18.350] [bmv2] [D] [thread 6941] Adding interface s1-eth4 as port 4
+[19:35:18.378] [bmv2] [I] [thread 6941] Starting Thrift server on port 9090
+[19:35:18.378] [bmv2] [I] [thread 6941] Thrift server was started
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Processing packet received on port 4
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Parser 'parser': start
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Extracting header 'ethernet'
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Parser state 'start': key is 86dd
+[19:35:18.402] [bmv2] [T] [thread 6947] [0.0] [cxt 0] Bytes parsed: 14
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Parser 'parser': end
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Pipeline 'ingress': start
+[19:35:18.402] [bmv2] [T] [thread 6947] [0.0] [cxt 0] /home/rmz/p4-utils/examples/my-p4qcn/p4qcn.p4(189) Condition "hdr.ipv4.isValid()" (node_2) is false
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Pipeline 'ingress': end
+[19:35:18.402] [bmv2] [D] [thread 6947] [0.0] [cxt 0] Egress port is 0
+[19:35:18.403] [bmv2] [D] [thread 6948] [0.0] [cxt 0] Pipeline 'egress': start
+[19:35:18.403] [bmv2] [T] [thread 6948] [0.0] [cxt 0] /home/rmz/p4-utils/examples/my-p4qcn/p4qcn.p4(233) Condition "hdr.ipv4.isValid() && standard_metadata.instance_type == 0" (node_7) is false
+[19:35:18.403] [bmv2] [T] [thread 6948] [0.0] [cxt 0] /home/rmz/p4-utils/examples/my-p4qcn/p4qcn.p4(253) Condition "standard_metadata.instance_type == 2" (node_17) is false
+[19:35:18.403] [bmv2] [D] [thread 6948] [0.0] [cxt 0] Pipeline 'egress': end
+[19:35:18.403] [bmv2] [D] [thread 6948] [0.0] [cxt 0] Deparser 'deparser': start
+[19:35:18.403] [bmv2] [T] [thread 6948] [0.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[19:35:18.403] [bmv2] [D] [thread 6948] [0.0] [cxt 0] Deparsing header 'ethernet'
+[19:35:18.403] [bmv2] [D] [thread 6948] [0.0] [cxt 0] Deparser 'deparser': end
+[19:35:18.403] [bmv2] [D] [thread 6952] [0.0] [cxt 0] Transmitting packet of size 90 out of port 0
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Processing packet received on port 3
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Parser 'parser': start
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Parser 'parser' entering state 'start'
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Extracting header 'ethernet'
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Parser state 'start': key is 86dd
+[19:35:18.434] [bmv2] [T] [thread 6947] [1.0] [cxt 0] Bytes parsed: 14
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Parser 'parser': end
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Pipeline 'ingress': start
+[19:35:18.434] [bmv2] [T] [thread 6947] [1.0] [cxt 0] /home/rmz/p4-utils/examples/my-p4qcn/p4qcn.p4(189) Condition "hdr.ipv4.isValid()" (node_2) is false
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Pipeline 'ingress': end
+[19:35:18.434] [bmv2] [D] [thread 6947] [1.0] [cxt 0] Egress port is 0
+[19:35:18.434] [bmv2] [D] [thread 6948] [1.0] [cxt 0] Pipeline 'egress': start
+[19:35:18.434] [bmv2] [T] [thread 6948] [1.0] [cxt 0] /home/rmz/p4-utils/examples/my-p4qcn/p4qcn.p4(233) Condition "hdr.ipv4.isValid() && standard_metadata.instance_type == 0" (node_7) is false
+[19:35:18.434] [bmv2] [T] [thread 6948] [1.0] [cxt 0] /home/rmz/p4-utils/examples/my-p4qcn/p4qcn.p4(253) Condition "standard_metadata.instance_type == 2" (node_17) is false
+[19:35:18.434] [bmv2] [D] [thread 6948] [1.0] [cxt 0] Pipeline 'egress': end
+[19:35:18.434] [bmv2] [D] [thread 6948] [1.0] [cxt 0] Deparser 'deparser': start
+[19:35:18.434] [bmv2] [T] [thread 6948] [1.0] [cxt 0] Skipping checksum 'cksum' update because condition not met
+[19:35:18.434] [bmv2] [D] [thread 6948] [1.0] [cxt 0] Deparsing header 'ethernet'
+[19:35:18.434] [bmv2] [D] [thread 6948] [1.0] [cxt 0] Deparser 'deparser': end
+[19:35:18.434] [bmv2] [D] [thread 6952] [1.0] [cxt 0] Transmitting packet of size 86 out of port 0
+[19:35:18.674] [bmv2] [T] [thread 7022] bm_get_config
+[19:35:18.676] [bmv2] [T] [thread 7022] bm_set_default_action
+[19:35:18.676] [bmv2] [D] [thread 7022] Set default entry for table 'MyEgress.int_table': MyEgress.add_int_header - 1,
+[19:35:18.676] [bmv2] [T] [thread 7022] set_egress_queue_rate
+[19:35:18.677] [bmv2] [T] [thread 7022] set_egress_queue_rate
+[19:35:18.677] [bmv2] [T] [thread 7022] set_egress_queue_rate
+[19:35:18.677] [bmv2] [T] [thread 7022] set_egress_queue_rate
+[19:35:18.677] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.677] [bmv2] [D] [thread 7022] Entry 0 added to table 'MyIngress.vl_table'
+[19:35:18.678] [bmv2] [D] [thread 7022] Dumping entry 0
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000101
+Action entry: MyIngress.Check_VL - 1,12c,
+
+[19:35:18.678] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.678] [bmv2] [D] [thread 7022] Entry 1 added to table 'MyIngress.vl_table'
+[19:35:18.678] [bmv2] [D] [thread 7022] Dumping entry 1
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000102
+Action entry: MyIngress.Check_VL - 2,12c,
+
+[19:35:18.678] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.678] [bmv2] [D] [thread 7022] Entry 2 added to table 'MyIngress.vl_table'
+[19:35:18.678] [bmv2] [D] [thread 7022] Dumping entry 2
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000103
+Action entry: MyIngress.Check_VL - 3,12c,
+
+[19:35:18.679] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.679] [bmv2] [D] [thread 7022] Entry 3 added to table 'MyIngress.vl_table'
+[19:35:18.679] [bmv2] [D] [thread 7022] Dumping entry 3
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000204
+Action entry: MyIngress.Check_VL - 3,12c,
+
+[19:35:18.679] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.679] [bmv2] [D] [thread 7022] Entry 4 added to table 'MyIngress.vl_table'
+[19:35:18.679] [bmv2] [D] [thread 7022] Dumping entry 4
+Match key:
+* hdr.ethernet.srcAddr: EXACT     00000a000205
+Action entry: MyIngress.Check_VL - 3,12c,
+
+[19:35:18.679] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.679] [bmv2] [D] [thread 7022] Entry 0 added to table 'MyIngress.ipv4_lpm'
+[19:35:18.679] [bmv2] [D] [thread 7022] Dumping entry 0
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000205/32
+Action entry: MyIngress.ipv4_forward - a000205,4,
+
+[19:35:18.680] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.680] [bmv2] [D] [thread 7022] Entry 1 added to table 'MyIngress.ipv4_lpm'
+[19:35:18.680] [bmv2] [D] [thread 7022] Dumping entry 1
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000204/32
+Action entry: MyIngress.ipv4_forward - a000204,4,
+
+[19:35:18.680] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.680] [bmv2] [D] [thread 7022] Entry 2 added to table 'MyIngress.ipv4_lpm'
+[19:35:18.680] [bmv2] [D] [thread 7022] Dumping entry 2
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000103/32
+Action entry: MyIngress.ipv4_forward - a000103,3,
+
+[19:35:18.680] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.680] [bmv2] [D] [thread 7022] Entry 3 added to table 'MyIngress.ipv4_lpm'
+[19:35:18.680] [bmv2] [D] [thread 7022] Dumping entry 3
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000102/32
+Action entry: MyIngress.ipv4_forward - a000102,2,
+
+[19:35:18.681] [bmv2] [T] [thread 7022] bm_table_add_entry
+[19:35:18.681] [bmv2] [D] [thread 7022] Entry 4 added to table 'MyIngress.ipv4_lpm'
+[19:35:18.681] [bmv2] [D] [thread 7022] Dumping entry 4
+Match key:
+* hdr.ipv4.dstAddr    : LPM       0a000101/32
+Action entry: MyIngress.ipv4_forward - a000101,1,
+
+[19:35:18.681] [bmv2] [T] [thread 7022] mirroring_sesssion_add
+[19:35:18.681] [bmv2] [T] [thread 7022] mirroring_sesssion_add
+[19:35:18.682] [bmv2] [T] [thread 7022] mirroring_sesssion_add
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory

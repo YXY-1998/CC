@@ -1,0 +1,57 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of int_table
+action:              add_int_header
+runtime data:        00:00:00:02
+RuntimeCmd: RuntimeCmd: RuntimeCmd: RuntimeCmd: RuntimeCmd: Adding entry to exact match table MyIngress.vl_table
+match key:           EXACT-00:00:0a:00:01:01
+action:              Check_VL
+runtime data:        00:01	00:00:00:c8
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table MyIngress.vl_table
+match key:           EXACT-00:00:0a:00:01:02
+action:              Check_VL
+runtime data:        00:02	00:00:00:c8
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to exact match table MyIngress.vl_table
+match key:           EXACT-00:00:0a:00:01:03
+action:              Check_VL
+runtime data:        00:03	00:00:00:c8
+Entry has been added with handle 2
+RuntimeCmd: Adding entry to exact match table MyIngress.vl_table
+match key:           EXACT-00:00:0a:00:02:04
+action:              Check_VL
+runtime data:        00:03	00:00:00:c8
+Entry has been added with handle 3
+RuntimeCmd: Adding entry to exact match table MyIngress.vl_table
+match key:           EXACT-00:00:0a:00:02:05
+action:              Check_VL
+runtime data:        00:03	00:00:00:c8
+Entry has been added with handle 4
+RuntimeCmd: Adding entry to lpm match table MyIngress.ipv4_lpm
+match key:           LPM-0a:00:02:05/32
+action:              ipv4_forward
+runtime data:        00:00:0a:00:02:05	00:02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to lpm match table MyIngress.ipv4_lpm
+match key:           LPM-0a:00:02:04/32
+action:              ipv4_forward
+runtime data:        00:00:0a:00:02:04	00:01
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to lpm match table MyIngress.ipv4_lpm
+match key:           LPM-0a:00:01:03/32
+action:              ipv4_forward
+runtime data:        00:00:0a:00:01:03	00:03
+Entry has been added with handle 2
+RuntimeCmd: Adding entry to lpm match table MyIngress.ipv4_lpm
+match key:           LPM-0a:00:01:02/32
+action:              ipv4_forward
+runtime data:        00:00:0a:00:01:02	00:03
+Entry has been added with handle 3
+RuntimeCmd: Adding entry to lpm match table MyIngress.ipv4_lpm
+match key:           LPM-0a:00:01:01/32
+action:              ipv4_forward
+runtime data:        00:00:0a:00:01:01	00:03
+Entry has been added with handle 4
+RuntimeCmd: RuntimeCmd: RuntimeCmd: RuntimeCmd: 
